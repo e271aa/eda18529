@@ -31,12 +31,11 @@ Meio* lerMeios()
     fp = fopen("meios.txt","r");
     if (fp!=NULL)
     {
-        while (!feof(fp))
-        {
-            fscanf(fp,"%d;%f;%f;%[^\n]s\n", &cod, &bat, &aut, tipo);
-            aux = inserirMeio(aux, cod, tipo, bat, aut);
-        }
-        fclose(fp);
+      while (fscanf(fp,"%d;%f;%f;%s\n", &cod, &bat, &aut, tipo) == 4)
+      {
+        aux = inserirMeio(aux, cod, tipo, bat, aut);
+      }
+      fclose(fp);
     }
     return(aux);
 }
@@ -77,8 +76,26 @@ Meio* lerMeiosBinario()
     return(inicio);
 }
 
+int inserirMeio(Meio* inicio, int cod, char tipo[], float bat, float aut) {
+  while (existeMeio(*inicio, cod)) {
+    printf("O código %d já existe, incrementando para o próximo registro.\n", cod);
+    cod++;
+  }
+  Meio* novo = malloc(sizeof(struct meio_registo));
+  if (novo != NULL) {
+    novo->codigo = cod;
+    strcpy(novo->tipo, tipo);
+    novo->bateria = bat;
+    novo->autonomia = aut;
+    novo->seguinte = *inicio;
+    *inicio = novo;
+  }
+  return cod;
+}
+
+
 // Inserção de um novo registo
-Meio* inserirMeio(Meio * inicio, int cod, char tipo[], float bat, float aut)
+/*Meio* inserirMeio(Meio * inicio, int cod, char tipo[], float bat, float aut)
 {
   if (!existeMeio(inicio, cod)) {
   Meio * novo = malloc(sizeof(struct meio_registo));
@@ -86,29 +103,31 @@ Meio* inserirMeio(Meio * inicio, int cod, char tipo[], float bat, float aut)
     novo->codigo = cod;
     strcpy(novo->tipo, tipo);
     novo->bateria = bat;
+    novo->autonomia = aut;
     novo->seguinte = inicio;
     return(novo);
     }
   } else return(inicio);
-}
+}*/
 
 // listar na consola o conteúdo da lista ligada
 void listarMeios(Meio * inicio)
 {while (inicio != NULL)
- {printf("%d %s %.2f %.2f\n",inicio->codigo,inicio->tipo, 
-		             inicio->bateria, inicio->autonomia);
+    {   printf("\n------------------------------------------------------------------------------------------------------------------\n");
+        printf("\033[1mCodigo do meio: %d\033[0m         \tTipo de mobilidade: %s    \tNivel da bateria: %.1f%%    \tAutonomia: %.1fkm",inicio->codigo,inicio->tipo, inicio->bateria, inicio->autonomia);
   inicio = inicio->seguinte;
  }
+ printf("\n------------------------------------------------------------------------------------------------------------------\n");
 }
 
 // Determinar existência do 'codigo' na lista ligada 'inicio'
 // devolve 1 se existir ou 0 caso contrário
-int existeMeio(Meio* inicio, int cod)
-{while(inicio!=NULL)
-  {if (inicio->codigo == cod) return(1);
-   inicio = inicio->seguinte;
+int existeMeio(Meio* inicio, int cod) {
+  while(inicio != NULL) {
+    if (inicio->codigo == cod) return(1);
+    inicio = inicio->seguinte;
   }
- return(0);
+  return(0);
 }
 
 // Remover um meio a partir do seu código{

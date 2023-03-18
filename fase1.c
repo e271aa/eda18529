@@ -8,6 +8,37 @@
 #include "gestor.h"
 #include "cliente.h"
 
+/*int lerCodigo() {
+    FILE *fp = fopen("meios.txt", "r");
+    int cod = 1, max_cod = 0;
+    if (fp) {
+        while (fscanf(fp, "%d", &cod) == 1) { // lê cada número do arquivo
+            if (cod > max_cod) { // verifica se é maior que o valor máximo encontrado até agora
+                max_cod = cod; // atualiza o valor máximo encontrado
+            }
+        }
+        fclose(fp);
+    }
+    return max_cod;
+}*/
+
+/*int lerCodigo() {
+    FILE *fp = fopen("meios.txt", "r");
+    int cod = 1;
+    if (fp) {
+        fscanf(fp, "%d", &cod);
+        fclose(fp);
+    }
+    return cod;
+}*/
+
+/*void gravarCodigo(int cod) {
+    FILE *fp = fopen("meios.txt", "w");
+    if (fp) {
+        fprintf(fp, "%d", cod);
+        fclose(fp);
+    }
+}*/
 
 void loading()
 {
@@ -58,11 +89,9 @@ int menu_meio()
 	printf("\n\n\t=====================================\n");
 	printf("\t|    Meio de mobilidade eletrica    |\n");
 	printf("\t=====================================\n");
-	printf("\t| 1. Inserir Meio                   |\n");
+	printf("\t| 1. Adicionar Meio                 |\n");
 	printf("\t| 2. Remover Meio                   |\n");
-	printf("\t| 3. Listar Meios                   |\n");
-	printf("\t| 4. Guardar Meios                  |\n");
-	printf("\t| 5. Ler Meios                      |\n");
+	printf("\t| 3. Listar Todos os Meios          |\n");
 	printf("\t|                                   |\n");
 	printf("\t| 9. Anterior               \033[31m0. Sair\033[0m |\n");
 	printf("\t=====================================\n");
@@ -74,14 +103,13 @@ int menu_meio()
 int main()
 {
     loading();
-    
     Meio *meios = NULL; // Lista ligada vazia
 	Cliente *clientes = NULL; // Lista ligada vazia
 	struct Gestor gestor_admin = {"admin", "admin"};
     int op_p, op_meio, op_cliente, numcliente;
     float bat, aut;
     char tipo[50], input_username[20], input_password[20], nome[50], email[50], tel[15], morada[100];
-    static int cod = 1;
+    int cod = 1;
 
     do
     {
@@ -89,50 +117,62 @@ int main()
         switch(op_p)
         {
 			case 1:
-                meios = lerMeios();
-                meios = lerMeiosBinario();
                 do
                 {
+                    meios = lerMeios();
+                    meios = lerMeiosBinario();
                     op_meio = menu_meio();
                     switch(op_meio)
                     {
                         case 1: // Inserir meio
-                            printf("Tipo\n");
-                            scanf("%s",tipo);
-                            printf("Nivel da bateria?\n");
-                            scanf("%f",&bat);
-                            printf("Autonomia\n");
-                            scanf("%f",&aut);
-                            meios = inserirMeio(meios,cod,tipo,bat,aut);
-                            printf("O seu codigo e %d\n", cod);
-                            cod++;
-                            printf("Pressione qualquer tecla para continuar...");
+                            system("cls");
+                            printf("\n\n\t\tNovo Meio de mobilidade eletrica\n");
+                            printf("\t\033[2m(preencha os campos abaixo com as informacoes solicitadas)\033[0m\n\n");
+                            printf(" > Tipo de mobilidade eletrica: ");
+                            scanf("%s", &tipo);
+                            printf(" > Nivel da bateria: ");
+                            do {
+                                getchar();
+                                scanf("%f", &bat);
+                                if (bat < 0 || bat > 100) 
+                                {
+                                    printf("\033[2mValor invalido para o nivel da bateria. O nivel da bateria e representado em percentagem de 0 a 100%%\033[0m\n");
+                                    printf(" > Reintroduza o nivel da bateria: ");
+                                } 
+                            } while (bat < 0 || bat > 100);
+                            printf(" > Autonomia: ");
+                            scanf("%f", &aut);
+                            cod = inserirMeio(&meios, cod, tipo, bat, aut);
+                            printf("\n\t\033[5m\033[4m%d\033[0m é o código atribuído a este meio de mobilidade elétrica!\n", cod);
+                            guardarMeios(meios);
+                            guardarMeiosBinario(meios);
+                            printf("\n\033[31mPressione qualquer tecla para continuar...\033[0m");
                             getch(); // Espera o usuário pressionar uma tecla
+                            getchar();
                             break;
                         case 2: // Remover meio
                             printf("Codigo do meio de mobilidade a remover?\n");
                             scanf("%d",&cod);
                             meios = removerMeio(meios, cod);
+                            guardarMeios(meios);
+                            guardarMeiosBinario(meios);
+                            getchar();
                             break;
                         case 3: // Listar meios
+                            system("cls");
                             if (meios == NULL)
                             {
                                 printf("Nao ha\n");
                             }
                             else
                             {
+                                printf("\nLista de meios de mobilidade eletrica\n");
                                 listarMeios(meios);
                             }
-                            printf("Pressione qualquer tecla para continuar...");
+                            printf("\n\033[31mPressione qualquer tecla para continuar...\033[0m");
                             getch(); // Espera o usuário pressionar uma tecla
-                            break;
-                        case 4: // Guardar meios
-                            guardarMeios(meios);
-                            guardarMeiosBinario(meios);
-                            break;
-                        case 5: // Ler meios
-                            meios = lerMeios();
-                            break;                
+                            getchar();
+                            break;           
                         case 9: break; // Voltar para o menu anterior
                     }
                 }
