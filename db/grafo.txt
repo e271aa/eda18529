@@ -1,0 +1,121 @@
+Vertice: ///davam.nele.solda
+ - Adjacente: ///sulcar.desfastio.adubar, Distancia: 3.40
+ - Adjacente: ///redor.belo.ligam, Distancia: 5.40
+ - Adjacente: ///lesmas.chorar.folga, Distancia: 3.20
+ - Adjacente: ///merece.irem.alcancei, Distancia: 3.00
+ - Adjacente: ///idosa.fraca.jogamos, Distancia: 1.70
+ - Adjacente: ///massas.faixa.selos, Distancia: 1.20
+ - Adjacente: ///redor.olhe.atol, Distancia: 3.50
+ - Adjacente: ///pediu.flui.bica, Distancia: 1.30
+ - Adjacente: ///facial.jogam.chame, Distancia: 2.70
+ - Adjacente: ///alpinos.contributivo.cintila, Distancia: 5.80
+Vertice: ///alpinos.contributivo.cintila
+ - Adjacente: ///sulcar.desfastio.adubar, Distancia: 8.40
+ - Adjacente: ///redor.belo.ligam, Distancia: 2.40
+ - Adjacente: ///lesmas.chorar.folga, Distancia: 8.50
+ - Adjacente: ///merece.irem.alcancei, Distancia: 9.30
+ - Adjacente: ///idosa.fraca.jogamos, Distancia: 5.80
+ - Adjacente: ///massas.faixa.selos, Distancia: 5.90
+ - Adjacente: ///redor.olhe.atol, Distancia: 6.30
+ - Adjacente: ///pediu.flui.bica, Distancia: 7.40
+ - Adjacente: ///facial.jogam.chame, Distancia: 8.80
+ - Adjacente: ///davam.nele.solda, Distancia: 5.80
+Vertice: ///facial.jogam.chame
+ - Adjacente: ///sulcar.desfastio.adubar, Distancia: 1.60
+ - Adjacente: ///redor.belo.ligam, Distancia: 6.70
+ - Adjacente: ///lesmas.chorar.folga, Distancia: 1.50
+ - Adjacente: ///merece.irem.alcancei, Distancia: 0.35
+ - Adjacente: ///idosa.fraca.jogamos, Distancia: 2.90
+ - Adjacente: ///massas.faixa.selos, Distancia: 2.60
+ - Adjacente: ///redor.olhe.atol, Distancia: 3.90
+ - Adjacente: ///pediu.flui.bica, Distancia: 3.20
+ - Adjacente: ///alpinos.contributivo.cintila, Distancia: 8.80
+ - Adjacente: ///davam.nele.solda, Distancia: 2.70
+Vertice: ///pediu.flui.bica
+ - Adjacente: ///sulcar.desfastio.adubar, Distancia: 5.00
+ - Adjacente: ///redor.belo.ligam, Distancia: 6.00
+ - Adjacente: ///lesmas.chorar.folga, Distancia: 4.80
+ - Adjacente: ///merece.irem.alcancei, Distancia: 3.50
+ - Adjacente: ///idosa.fraca.jogamos, Distancia: 2.30
+ - Adjacente: ///massas.faixa.selos, Distancia: 1.30
+ - Adjacente: ///redor.olhe.atol, Distancia: 4.50
+ - Adjacente: ///facial.jogam.chame, Distancia: 3.20
+ - Adjacente: ///alpinos.contributivo.cintila, Distancia: 7.40
+ - Adjacente: ///davam.nele.solda, Distancia: 1.30
+Vertice: ///redor.olhe.atol
+ - Adjacente: ///sulcar.desfastio.adubar, Distancia: 3.00
+ - Adjacente: ///redor.belo.ligam, Distancia: 4.40
+ - Adjacente: ///lesmas.chorar.folga, Distancia: 2.50
+ - Adjacente: ///merece.irem.alcancei, Distancia: 3.80
+ - Adjacente: ///idosa.fraca.jogamos, Distancia: 2.70
+ - Adjacente: ///massas.faixa.selos, Distancia: 2.80
+ - Adjacente: ///pediu.flui.bica, Distancia: 4.50
+ - Adjacente: ///facial.jogam.chame, Distancia: 3.90
+ - Adjacente: ///alpinos.contributivo.cintila, Distancia: 6.30
+ - Adjacente: ///davam.nele.solda, Distancia: 3.50
+Vertice: ///massas.faixa.selos
+ - Adjacente: ///sulcar.desfastio.adubar, Distancia: 3.30
+ - Adjacente: ///redor.belo.ligam, Distancia: 4.30
+ - Adjacente: ///lesmas.chorar.folga, Distancia: 3.10
+ - Adjacente: ///merece.irem.alcancei, Distancia: 3.90
+ - Adjacente: ///idosa.fraca.jogamos, Distancia: 0.60
+ - Adjacente: ///redor.olhe.atol, Distancia: 2.80
+ - Adjacente: ///pediu.flui.bica, Distancia: 1.30
+ - Adjacente: ///facial.jogam.chame, Distancia: 2.60
+ - Adjacente: ///alpinos.contributivo.cintila, Distancia: 5.90
+ - Adjacente: ///davam.nele.solda, Distancia: 1.20
+Vertice: ///idosa.fraca.jogamos
+ - Adjacente: ///sulcar.desfastio.adubar, Distancia: 3.10
+ - Adjacente: ///redor.belo.ligam, Distancia: 4.10
+ - Adjacente: ///lesmas.chorar.folga, Distancia: 2.90
+ - Adjacente: ///merece.irem.alcancei, Distancia: 3.80
+ - Adjacente: ///massas.faixa.selos, Distancia: 0.60
+ - Adjacente: ///redor.olhe.atol, Distancia: 2.70
+ - Adjacente: ///pediu.flui.bica, Distancia: 2.30
+ - Adjacente: ///facial.jogam.chame, Distancia: 2.90
+ - Adjacente: ///alpinos.contributivo.cintila, Distancia: 5.80
+ - Adjacente: ///davam.nele.solda, Distancia: 1.70
+Vertice: ///merece.irem.alcancei
+ - Adjacente: ///sulcar.desfastio.adubar, Distancia: 1.60
+ - Adjacente: ///redor.belo.ligam, Distancia: 6.90
+ - Adjacente: ///lesmas.chorar.folga, Distancia: 1.40
+ - Adjacente: ///idosa.fraca.jogamos, Distancia: 3.80
+ - Adjacente: ///massas.faixa.selos, Distancia: 3.90
+ - Adjacente: ///redor.olhe.atol, Distancia: 3.80
+ - Adjacente: ///pediu.flui.bica, Distancia: 3.50
+ - Adjacente: ///facial.jogam.chame, Distancia: 0.35
+ - Adjacente: ///alpinos.contributivo.cintila, Distancia: 9.30
+ - Adjacente: ///davam.nele.solda, Distancia: 3.00
+Vertice: ///lesmas.chorar.folga
+ - Adjacente: ///sulcar.desfastio.adubar, Distancia: 0.45
+ - Adjacente: ///redor.belo.ligam, Distancia: 6.00
+ - Adjacente: ///merece.irem.alcancei, Distancia: 1.40
+ - Adjacente: ///idosa.fraca.jogamos, Distancia: 2.90
+ - Adjacente: ///massas.faixa.selos, Distancia: 3.10
+ - Adjacente: ///redor.olhe.atol, Distancia: 2.50
+ - Adjacente: ///pediu.flui.bica, Distancia: 4.80
+ - Adjacente: ///facial.jogam.chame, Distancia: 1.50
+ - Adjacente: ///alpinos.contributivo.cintila, Distancia: 8.50
+ - Adjacente: ///davam.nele.solda, Distancia: 3.20
+Vertice: ///redor.belo.ligam
+ - Adjacente: ///sulcar.desfastio.adubar, Distancia: 7.30
+ - Adjacente: ///lesmas.chorar.folga, Distancia: 6.00
+ - Adjacente: ///merece.irem.alcancei, Distancia: 6.90
+ - Adjacente: ///idosa.fraca.jogamos, Distancia: 4.10
+ - Adjacente: ///massas.faixa.selos, Distancia: 4.30
+ - Adjacente: ///redor.olhe.atol, Distancia: 4.40
+ - Adjacente: ///pediu.flui.bica, Distancia: 6.00
+ - Adjacente: ///facial.jogam.chame, Distancia: 6.70
+ - Adjacente: ///alpinos.contributivo.cintila, Distancia: 2.40
+ - Adjacente: ///davam.nele.solda, Distancia: 5.40
+Vertice: ///sulcar.desfastio.adubar
+ - Adjacente: ///redor.belo.ligam, Distancia: 7.30
+ - Adjacente: ///lesmas.chorar.folga, Distancia: 0.45
+ - Adjacente: ///merece.irem.alcancei, Distancia: 1.60
+ - Adjacente: ///idosa.fraca.jogamos, Distancia: 3.10
+ - Adjacente: ///massas.faixa.selos, Distancia: 3.30
+ - Adjacente: ///redor.olhe.atol, Distancia: 3.00
+ - Adjacente: ///pediu.flui.bica, Distancia: 5.00
+ - Adjacente: ///facial.jogam.chame, Distancia: 1.60
+ - Adjacente: ///alpinos.contributivo.cintila, Distancia: 8.40
+ - Adjacente: ///davam.nele.solda, Distancia: 3.40

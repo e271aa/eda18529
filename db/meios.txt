@@ -1,0 +1,5 @@
+5;90.000000;20.000000;0.500000;0;Skate;///pediu.flui.bica
+3;100.000000;15.000000;0.300000;0;Bicicleta;///davam.nele.solda
+1;100.000000;30.000000;0.200000;0;Skate;///davam.nele.solda
+2;100.000000;40.000000;0.500000;0;Bicicleta;///alpinos.contributivo.cintila
+4;100.000000;10.000000;0.600000;0;Trotinete;///facial.jogam.chame

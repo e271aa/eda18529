@@ -1,0 +1,2 @@
+4;Mariana;mariana@gmail.com;96;///alpinos.contributivo.cintila;30.000000;mary;1234
+22;Ruben;ruben@gmail.com;91;///davam.nele.solda;30.000000;ruben;1234
